@@ -27,7 +27,7 @@ export const requestPermissions = async (): Promise<void> => {
     }
 };
 
-// Load saved images from AsyncStorage
+// load saved images from AsyncStorage
 export const loadFromStorage = async <T>(STORAGE_KEY: string, setImages: (data: T) => void): Promise<void> => {
     try {
         const data = await AsyncStorage.getItem(STORAGE_KEY);
@@ -37,7 +37,7 @@ export const loadFromStorage = async <T>(STORAGE_KEY: string, setImages: (data: 
     }
 };
 
-// Save images array to AsyncStorage
+// save images array to AsyncStorage
 export const saveToStorage = async (STORAGE_KEY: string, arr: any[]): Promise<void> => {
     try {
         await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
@@ -46,7 +46,7 @@ export const saveToStorage = async (STORAGE_KEY: string, arr: any[]): Promise<vo
     }
 };
 
-// Pick images from gallery
+// pick images from gallery
 export const pickImages = async (
     STORAGE_KEY: string,
     images: any[],
@@ -54,7 +54,7 @@ export const pickImages = async (
     saveToStorage: (STORAGE_KEY: string, arr: any[]) => Promise<void>
 ): Promise<void> => {
     try {
-        // Check permission first
+        // check permission first
         const { status } = await ImagePicker.getMediaLibraryPermissionsAsync();
 
         if (status !== 'granted') {
@@ -68,7 +68,7 @@ export const pickImages = async (
             }
         }
 
-        // Proceed to open picker only if permission is granted
+        // proceed to open picker only if permission is granted
         const result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ['images'],
             allowsMultipleSelection: true,

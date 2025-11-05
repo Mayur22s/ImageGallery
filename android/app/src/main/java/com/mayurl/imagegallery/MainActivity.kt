@@ -1,4 +1,4 @@
-package com.imagepicker
+package com.mayurl.imagegallery
 
 import android.os.Build
 import android.os.Bundle
