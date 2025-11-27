@@ -22,7 +22,7 @@ Setup
         => a: to run emulator (android)
     npm run android or npm run ios to run emulator or simulator
 
-# approach
+<!-- # approach
     - use expo-image-picker to request access device photos
     - iOS: configure permission in info.plist 
     - android: configure permission in AndroidManifest.xml
@@ -43,4 +43,4 @@ Setup
 
 # Known Issues
     : multiple delete images is missing
-    : animation is missing
+    : animation is missing -->
